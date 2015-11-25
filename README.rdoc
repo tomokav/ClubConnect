@@ -1,0 +1,21 @@
+== README
+
+
+This application writen on: 
+
+* Ruby version  :2.0
+* Rails version :4.0.4
+* MongoDB version: 2.4.8
+
+* Configuration: 
+  1. Make sure you have mongoDB installed in your system.
+  2. bundle install
+  3. rails s (for devlopment)
+  
+* Database creation
+  to change default one edit config/mongoid.yml 
+
+* No test suite is included till now
+
+{Detail documentation}[http://suvankar.svbtle.com/devise-and-mongoid-in-rails-4]
+

@@ -1,0 +1,46 @@
+   <% if user_signed_in? %>
+    <div class="container">
+        <p> Welcome <%=  current_user.email %>
+            <%= link_to "Sign out", destroy_user_session_path, :method => :delete %></p>
+
+
+
+          <% else %>
+          
+
+          <div class="jumbotron">
+            <div class="container">
+            <h1 class="home">ClubConnect</h1>
+            <p class="welcome">ClubConnect, the app that will connect you to your clubs latest news and information.<p class="welcome"> From match fixtures and results to the latest Twitter and Facebook post. Also included is a unique feature for users to checkout a live list of events in the local area.</p>
+
+           <%= button_to("Sign In", new_user_session_path, class: 'btn btn-lg btn-primary')  %>
+           <br>
+           <!--<%= link_to "Sign up", new_user_registration_path %>-->
+           <%= button_to("Sign Up", new_user_registration_path, class: 'btn btn-sml btn-success')  %>
+          
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>About Us</h2>
+          <p>To find out information regarding the app please click on the link below. This section includes details about all the different features available with the app and how to sign up</p>
+          <%= link_to("View details >>", about_path, class: 'btn btn-default')  %>
+         
+        </div>
+        <div class="col-md-4">
+          <h2>Contact Us</h2>
+          <p>If you have any query about what we do at ClubConnect or wish to contact us regarding anything related to the app please do so. All relavent contact details can be obtained from clicking the link below</p>
+          <%= link_to("View details >>", about_path, class: 'btn btn-default')  %>
+       </div>
+        <div class="col-md-4">
+          <h2>Developer</h2>
+          <p>ClubConnect was developed as part of a 4th Year project in
+            <% link_to "Waterford Institute of Technology", "http://www.wit.ie", :target => "_blank" %><a href="http://www.wit.ie" target="_blank"><i> Waterford Institute of Technology</i></a> 
+            and to find out details about the developer and other projects that they were involved in please click the button below</p>
+          <%= link_to("View details >>", about_path, class: 'btn btn-default')  %>
+        </div>
+      </div>
+<% end %>

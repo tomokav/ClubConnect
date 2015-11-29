@@ -7,9 +7,20 @@ MongoidDevise::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'movies#index'
+  #root 'movies#index'
+
+  root 'static_pages#home'
+
+  get 'about'   => 'static_pages#about'
+  get 'contact'   => 'static_pages#contact'
+  get 'developer'   => 'static_pages#developer'
+
+
+
+  get 'movies'  => 'movies#index'
+  
   authenticated :user do
-  root :to => 'movies#index', :as => :authenticated_root
+  root :to => 'layouts#home', :as => :authenticated_root
 end
 
   # Example of regular route:

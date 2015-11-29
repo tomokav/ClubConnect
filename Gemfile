@@ -7,6 +7,8 @@ gem 'mongoid', github: "mongoid/mongoid"
 gem 'bson_ext'
 gem 'devise'
 
+gem 'bootstrap-sass',       '3.2.0.0'
+
 group :development, :test do
 	gem 'cucumber-rails', :require => false
 	gem 'database_cleaner'

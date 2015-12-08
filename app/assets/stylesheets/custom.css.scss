@@ -13,11 +13,16 @@
 
     /* forms */
 
-    input, textarea, select, .uneditable-input {
+      input, textarea, select, .uneditable-input {
       border: 1px solid #bbb;
       width: 100%;
       margin-bottom: 15px;
      
+    }
+
+    .smaller{
+
+      width: 30%;
     }
 
     input {
@@ -61,6 +66,15 @@
     h1.home {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     text-align: left;
+    }
+
+    h1.about {
+    font-size: 2.5em;
+    }
+
+    p.about{
+    text-align: center;
+
     }
 
     p.home {
@@ -218,7 +232,40 @@
 
 
 
+/* JUMBOTROM */
 
+.other-color{
+    background: green
+  }
+
+
+/* CSS used here will be applied after bootstrap.css */
+
+
+
+.jumbotron.gray {
+background-color: lightgray;
+margin-bottom:0;
+}
+ 
+.jumbotron.blue {
+background-color: #DCDCDC;
+margin-bottom:0;
+
+}
+
+
+.jumbotron.green {
+background-color: #C4C4C4;
+margin-bottom:0;
+
+}
+
+.jumbotron.red {
+background-color: #A8A8A8;
+margin-bottom:0;
+
+}
 
 
 

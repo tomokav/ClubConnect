@@ -8,15 +8,16 @@
           <% else %>
           
 
-          <div class="jumbotron">
+          <div class="jumbotron home">
             <div class="container">
             <h1 class="home">ClubConnect</h1>
             <p class="welcome">ClubConnect, the app that will connect you to your clubs latest news and information.<p class="welcome"> From match fixtures and results to the latest Twitter and Facebook post. Also included is a unique feature for users to checkout a live list of events in the local area.</p>
 
-           <%= button_to("Sign In", new_user_session_path, class: 'btn btn-lg btn-primary')  %>
+           <%= button_to("Sign In", new_user_session_path, class: 'smaller btn  btn-primary')  %>
            <br>
-           <%= link_to "Sign up", new_user_registration_path %>
-           <%= button_to("Sign Up", new_user_registration_path, class: 'btn btn-sml btn-success')  %>
+           <%= link_to "Sign up",   new_user_registration_path %>
+
+           <%= button_to("Sign Up", new_user_registration_path, class: 'smaller btn btn-success')  %>
           
       </div>
     </div>

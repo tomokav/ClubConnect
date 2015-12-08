@@ -69,6 +69,6 @@ class LatestNewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def latest_news_params
-      params.require(:latest_news).permit(:NewsTitle, :NewsContent, :NewsDate, :NewsTime, :user_id_id)
+      params.require(:latest_news).permit(:Title, :Content, :Date, :Time)
     end
 end

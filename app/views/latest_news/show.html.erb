@@ -1,0 +1,25 @@
+<div class='container'>
+<p id="notice"><%= notice %></p>
+
+
+<table class="table">
+	<tr>
+		<th><strong>Title:</strong></th>
+		<th><strong>Content:</strong></th>
+		<th><strong>Date:</strong></th>
+		<th><strong>Time:</strong></th>
+    </tr>
+    <tr>
+        <td><%= @latest_news.Title %></td>
+        <td><%= @latest_news.Content %></td>
+        <td><%= @latest_news.Date %></td>
+        <td><%= @latest_news.Time %></td>
+
+
+    </tr>
+</table>
+  
+
+
+<%= link_to 'Edit', edit_latest_news_path(@latest_news) %> |
+<%= link_to 'Back', latest_news_index_path %>

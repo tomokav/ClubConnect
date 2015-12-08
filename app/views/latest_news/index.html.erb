@@ -1,0 +1,42 @@
+<div class='container'>
+<h1>Listing Latest News</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @latest_news.each do |latest_news| %>
+      <tr>
+        <td><%= latest_news.Title %></td>
+        <td><%= latest_news.Content %></td>
+        <td><%= latest_news.Date %></td>
+        <td><%= latest_news.Time %></td>
+
+        <td> <%= link_to('Show', latest_news, class: 'btn btn-sm btn-success') %></td>
+
+        <td> <%= link_to   'Edit', edit_latest_news_path(latest_news) %></td>
+
+       
+
+       <td> <%= link_to('Destroy', latest_news,  method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger')  %></td>
+
+
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add News Article', new_latest_news_path, class: 'btn btn-sm btn-default'%>

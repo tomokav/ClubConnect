@@ -9,6 +9,8 @@ gem 'devise'
 
 gem 'bootstrap-sass',       '3.2.0.0'
 
+gem 'owlcarousel-rails'
+
 group :development, :test do
 	gem 'cucumber-rails', :require => false
 	gem 'database_cleaner'

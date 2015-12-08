@@ -20,13 +20,10 @@
             
           </ul>
           <% if user_signed_in? %>
-
-
-  
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="">Whats On</a></li>
-            <li><a href="">Latest News</a></li>
-            <li><a href="">Club Connect</a></li>
+            <li class="<%= 'active' if current_page?(whatson_path) %>"> <%= link_to("Whats On", whatson_path)  %></li>
+            <li class="<%= 'active' if current_page?(latestnews_path) %>"> <%= link_to("Latest News", latestnews_path)  %></li>
+            <li class="<%= 'active' if current_page?(clubcontact_path) %>"> <%= link_to("Club Connect", clubcontact_path)  %></li>
           </ul><% end %>
           
         </div><!--/.nav-collapse -->

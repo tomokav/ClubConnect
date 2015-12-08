@@ -1,12 +1,13 @@
-<h1>Listing club_contacts</h1>
+<div class='container'>
+<h1>Listing Club Contacts</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Contactname</th>
-      <th>Contactrole</th>
-      <th>Contactmobilenum</th>
-      <th>User</th>
+      <th>Contact Name</th>
+      <th>Contact Role</th>
+      <th>Contact Mobile Number</th>
+  
       <th></th>
       <th></th>
       <th></th>
@@ -19,10 +20,14 @@
         <td><%= club_contact.ContactName %></td>
         <td><%= club_contact.ContactRole %></td>
         <td><%= club_contact.ContactMobileNum %></td>
-        <td><%= club_contact.user_id %></td>
-        <td><%= link_to 'Show', club_contact %></td>
+       
+        <td> <%= link_to('Show', club_contact, class: 'btn btn-sm btn-success') %></td>
+
         <td><%= link_to 'Edit', edit_club_contact_path(club_contact) %></td>
-        <td><%= link_to 'Destroy', club_contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       
+
+       <td> <%= link_to('Destroy', club_contact,  method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger')  %></td>
+        
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +35,5 @@
 
 <br>
 
-<%= link_to 'New Club contact', new_club_contact_path %>
+<%= link_to 'New Club Contact', new_club_contact_path,  class: 'btn btn-sm btn-default' %>
+</div>

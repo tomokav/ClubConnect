@@ -3,5 +3,5 @@ class ClubContact
   field :ContactName, type: String
   field :ContactRole, type: String
   field :ContactMobileNum, type: String
-  embedded_in :user_id
+  
 end

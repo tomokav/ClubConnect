@@ -69,6 +69,6 @@ class ClubContactsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def club_contact_params
-      params.require(:club_contact).permit(:ContactName, :ContactRole, :ContactMobileNum, :user_id_id)
+      params.require(:club_contact).permit(:ContactName, :ContactRole, :ContactMobileNum)
     end
 end

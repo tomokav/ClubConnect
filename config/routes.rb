@@ -19,10 +19,20 @@ MongoidDevise::Application.routes.draw do
 
   root 'static_pages#home'
 
+
+
   get 'about'   => 'static_pages#about'
   get 'contact'   => 'static_pages#contact'
   get 'developer'   => 'static_pages#developer'
 
+  get 'clubcontact'   => 'club_contacts#index'
+ 
+
+  get 'whatson'   => 'static_pages#whatson'
+
+
+  get 'latestnews'   => 'static_pages#latestnews'
+  
 
 
   get 'movies'  => 'movies#index'

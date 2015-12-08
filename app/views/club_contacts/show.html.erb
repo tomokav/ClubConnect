@@ -1,24 +1,16 @@
+<br>
+<div class='container'>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Contactname:</strong>
-  <%= @club_contact.ContactName %>
-</p>
-
-<p>
-  <strong>Contactrole:</strong>
-  <%= @club_contact.ContactRole %>
-</p>
-
-<p>
-  <strong>Contactmobilenum:</strong>
-  <%= @club_contact.ContactMobileNum %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @club_contact.user_id %>
-</p>
-
+<table class="table">
+	<tr>
+<th><strong>Contact Name:</strong></th>
+<th><strong>Contact Role:</strong></th>
+<th><strong>Contact Mobile No:</strong></th></tr>
+<tr>
+<td><%= @club_contact.ContactName %></td>
+<td><%= @club_contact.ContactRole %></td>
+<td><%= @club_contact.ContactMobileNum %></td></tr>
+</table>
 <%= link_to 'Edit', edit_club_contact_path(@club_contact) %> |
 <%= link_to 'Back', club_contacts_path %>

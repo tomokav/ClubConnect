@@ -11,6 +11,19 @@
     
     }
 
+    /* forms */
+
+    input, textarea, select, .uneditable-input {
+      border: 1px solid #bbb;
+      width: 100%;
+      margin-bottom: 15px;
+     
+    }
+
+    input {
+      height: auto !important;
+    }
+
     p.welcome{
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 

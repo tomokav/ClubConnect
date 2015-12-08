@@ -28,10 +28,10 @@ MongoidDevise::Application.routes.draw do
   get 'clubcontact'   => 'club_contacts#index'
  
 
-  get 'whatson'   => 'static_pages#whatson'
+  get 'whatson'   => 'whats_ons#index'
 
 
-  get 'latestnews'   => 'static_pages#latestnews'
+  get 'latestnews'   => 'latest_news#index'
   
 
 

@@ -1,0 +1,36 @@
+<div class='container'>
+<h1>Listing Whats On</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Event</th>
+      <th>Description</th>
+      <th>Time</th>
+      <th>Location</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @whats_ons.each do |whats_on| %>
+      <tr>
+        <td><%= whats_on.Day %></td>
+        <td><%= whats_on.Event %></td>
+        <td><%= whats_on.Description %></td>
+        <td><%= whats_on.Time %></td>
+        <td><%= whats_on.Location %></td>
+        <td><%= link_to 'Show', whats_on %></td>
+        <td><%= link_to 'Edit', edit_whats_on_path(whats_on) %></td>
+        <td><%= link_to 'Destroy', whats_on, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add New Event', new_whats_on_path, class: 'btn btn-sm btn-default' %>

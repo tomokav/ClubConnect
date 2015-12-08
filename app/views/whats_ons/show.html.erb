@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dayname:</strong>
+  <%= @whats_on.DayName %>
+</p>
+
+<p>
+  <strong>Eventname:</strong>
+  <%= @whats_on.EventName %>
+</p>
+
+<p>
+  <strong>Eventdesc:</strong>
+  <%= @whats_on.EventDesc %>
+</p>
+
+<p>
+  <strong>Eventtime:</strong>
+  <%= @whats_on.EventTime %>
+</p>
+
+<p>
+  <strong>Eventlocation:</strong>
+  <%= @whats_on.EventLocation %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @whats_on.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_whats_on_path(@whats_on) %> |
+<%= link_to 'Back', whats_ons_path %>

@@ -1,0 +1,33 @@
+<%= form_for(@club_contact) do |f| %>
+  <% if @club_contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@club_contact.errors.count, "error") %> prohibited this club_contact from being saved:</h2>
+
+      <ul>
+      <% @club_contact.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ContactName %><br>
+    <%= f.text_field :ContactName %>
+  </div>
+  <div class="field">
+    <%= f.label :ContactRole %><br>
+    <%= f.text_field :ContactRole %>
+  </div>
+  <div class="field">
+    <%= f.label :ContactMobileNum %><br>
+    <%= f.text_field :ContactMobileNum %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id_id %><br>
+    <%= f.text_field :user_id_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

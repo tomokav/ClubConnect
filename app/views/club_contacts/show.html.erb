@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Contactname:</strong>
+  <%= @club_contact.ContactName %>
+</p>
+
+<p>
+  <strong>Contactrole:</strong>
+  <%= @club_contact.ContactRole %>
+</p>
+
+<p>
+  <strong>Contactmobilenum:</strong>
+  <%= @club_contact.ContactMobileNum %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @club_contact.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_club_contact_path(@club_contact) %> |
+<%= link_to 'Back', club_contacts_path %>

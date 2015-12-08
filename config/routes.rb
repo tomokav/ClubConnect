@@ -1,5 +1,13 @@
 MongoidDevise::Application.routes.draw do
   
+  resources :club_contacts
+
+  resources :latest_news
+
+  resources :whats_ons
+
+  resources :models
+
   devise_for :users
   resources :movies
 

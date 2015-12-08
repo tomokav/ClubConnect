@@ -1,0 +1,33 @@
+<h1>Listing club_contacts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Contactname</th>
+      <th>Contactrole</th>
+      <th>Contactmobilenum</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @club_contacts.each do |club_contact| %>
+      <tr>
+        <td><%= club_contact.ContactName %></td>
+        <td><%= club_contact.ContactRole %></td>
+        <td><%= club_contact.ContactMobileNum %></td>
+        <td><%= club_contact.user_id %></td>
+        <td><%= link_to 'Show', club_contact %></td>
+        <td><%= link_to 'Edit', edit_club_contact_path(club_contact) %></td>
+        <td><%= link_to 'Destroy', club_contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Club contact', new_club_contact_path %>

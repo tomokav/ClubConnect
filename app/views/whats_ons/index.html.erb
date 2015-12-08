@@ -1,0 +1,37 @@
+<h1>Listing whats_ons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dayname</th>
+      <th>Eventname</th>
+      <th>Eventdesc</th>
+      <th>Eventtime</th>
+      <th>Eventlocation</th>
+      <th>User</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @whats_ons.each do |whats_on| %>
+      <tr>
+        <td><%= whats_on.DayName %></td>
+        <td><%= whats_on.EventName %></td>
+        <td><%= whats_on.EventDesc %></td>
+        <td><%= whats_on.EventTime %></td>
+        <td><%= whats_on.EventLocation %></td>
+        <td><%= whats_on.user_id %></td>
+        <td><%= link_to 'Show', whats_on %></td>
+        <td><%= link_to 'Edit', edit_whats_on_path(whats_on) %></td>
+        <td><%= link_to 'Destroy', whats_on, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Whats on', new_whats_on_path %>

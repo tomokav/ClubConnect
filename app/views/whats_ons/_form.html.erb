@@ -1,0 +1,41 @@
+<%= form_for(@whats_on) do |f| %>
+  <% if @whats_on.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@whats_on.errors.count, "error") %> prohibited this whats_on from being saved:</h2>
+
+      <ul>
+      <% @whats_on.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :DayName %><br>
+    <%= f.text_field :DayName %>
+  </div>
+  <div class="field">
+    <%= f.label :EventName %><br>
+    <%= f.text_field :EventName %>
+  </div>
+  <div class="field">
+    <%= f.label :EventDesc %><br>
+    <%= f.text_field :EventDesc %>
+  </div>
+  <div class="field">
+    <%= f.label :EventTime %><br>
+    <%= f.text_field :EventTime %>
+  </div>
+  <div class="field">
+    <%= f.label :EventLocation %><br>
+    <%= f.text_field :EventLocation %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id_id %><br>
+    <%= f.text_field :user_id_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

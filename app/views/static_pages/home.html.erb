@@ -15,7 +15,7 @@
 
            <%= button_to("Sign In", new_user_session_path, class: 'btn btn-lg btn-primary')  %>
            <br>
-           <!--<%= link_to "Sign up", new_user_registration_path %>-->
+           <%= link_to "Sign up", new_user_registration_path %>
            <%= button_to("Sign Up", new_user_registration_path, class: 'btn btn-sml btn-success')  %>
           
       </div>
@@ -33,14 +33,14 @@
         <div class="col-md-4">
           <h2>Contact Us</h2>
           <p>If you have any query about what we do at ClubConnect or wish to contact us regarding anything related to the app please do so. All relavent contact details can be obtained from clicking the link below</p>
-          <%= link_to("View details >>", about_path, class: 'btn btn-default')  %>
+          <%= link_to("View details >>", contact_path, class: 'btn btn-default')  %>
        </div>
         <div class="col-md-4">
           <h2>Developer</h2>
           <p>ClubConnect was developed as part of a 4th Year project in
             <% link_to "Waterford Institute of Technology", "http://www.wit.ie", :target => "_blank" %><a href="http://www.wit.ie" target="_blank"><i> Waterford Institute of Technology</i></a> 
             and to find out details about the developer and other projects that they were involved in please click the button below</p>
-          <%= link_to("View details >>", about_path, class: 'btn btn-default')  %>
+          <%= link_to("View details >>", developer_path, class: 'btn btn-default')  %>
         </div>
       </div>
 <% end %>
